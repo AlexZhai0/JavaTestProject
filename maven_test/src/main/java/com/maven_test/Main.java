@@ -1,4 +1,4 @@
-package com.test1;
+package com.maven_test;
 
 public class Main {
     public static void main(String[] args) {
