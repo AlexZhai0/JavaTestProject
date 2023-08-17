@@ -1,11 +1,14 @@
 package com.springboot_test.service.impl;
 
 import com.springboot_test.bean.Emp;
+import com.springboot_test.bean.EmpOld;
+import com.springboot_test.bean.PageBean;
 import com.springboot_test.dao.EmpDao;
 import com.springboot_test.service.EmpService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 //@Component //将当前类交给IOC容器管理, 成为IOC容器中的bean
@@ -16,9 +19,9 @@ public class EmpServiceB implements EmpService {
     private EmpDao empDao;
 
     @Override
-    public List<Emp> listEmp() {
+    public List<EmpOld> listEmp() {
         //1. 调用dao, 获取数据
-        List<Emp> empList = empDao.listEmp();
+        List<EmpOld> empList = empDao.listEmp();
 
         //2. 对数据进行转换处理 - gender, job
         empList.stream().forEach(emp -> {
@@ -41,5 +44,30 @@ public class EmpServiceB implements EmpService {
             }
         });
         return empList;
+    }
+
+    @Override
+    public PageBean page(Integer page, Integer pageSize, String name, Integer gender, LocalDate begin, LocalDate end) {
+        return null;
+    }
+
+    @Override
+    public void delete(List<Integer> ids) {
+
+    }
+
+    @Override
+    public void save(Emp emp) {
+
+    }
+
+    @Override
+    public Emp getById(Integer id) {
+        return null;
+    }
+
+    @Override
+    public void update(Emp emp) {
+
     }
 }

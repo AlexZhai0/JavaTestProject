@@ -1,71 +1,26 @@
 package com.springboot_test.bean;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
+/*员工类*/
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Emp {
+    private Integer id;
+    private String username;
+    private String password;
     private String name;
-    private Integer age;
+    private Integer gender;
     private String image;
-    private String gender;
-    private String job;
-
-    public Emp() {
-    }
-
-    public Emp(String name, Integer age, String image, String gender, String job) {
-        this.name = name;
-        this.age = age;
-        this.image = image;
-        this.gender = gender;
-        this.job = job;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
-    }
-
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public String getJob() {
-        return job;
-    }
-
-    public void setJob(String job) {
-        this.job = job;
-    }
-
-    @Override
-    public String toString() {
-        return "Emp{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                ", image='" + image + '\'' +
-                ", gender='" + gender + '\'' +
-                ", job='" + job + '\'' +
-                '}';
-    }
+    private Integer job;
+    private LocalDate entrydate; //LocalDate类型对应数据表中的date类型
+    private Integer deptId;
+    private LocalDateTime createTime;//LocalDateTime类型对应数据表中的datetime类型
+    private LocalDateTime updateTime;
 }
