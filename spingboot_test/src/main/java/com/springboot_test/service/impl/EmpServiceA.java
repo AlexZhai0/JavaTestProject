@@ -71,4 +71,9 @@ public class EmpServiceA implements EmpService {
     public void update(Emp emp) {
 
     }
+
+    @Override
+    public Emp login(Emp emp) {
+        return null;
+    }
 }
