@@ -2,6 +2,7 @@ package com.springboot_test.service.impl;
 
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
+import com.springboot_test.anno.Log;
 import com.springboot_test.bean.Emp;
 import com.springboot_test.bean.EmpOld;
 import com.springboot_test.bean.PageBean;
@@ -59,11 +60,13 @@ public class EmpServiceImpl implements EmpService {
     }
 
     @Override
+    @Log
     public void delete(List<Integer> ids) {
         empMapper.delete3(ids);
     }
 
     @Override
+    @Log
     public void save(Emp emp) {
         emp.setCreateTime(LocalDateTime.now());
         emp.setUpdateTime(LocalDateTime.now());
@@ -76,6 +79,7 @@ public class EmpServiceImpl implements EmpService {
     }
 
     @Override
+    @Log
     public void update(Emp emp) {
         emp.setUpdateTime(LocalDateTime.now());
         empMapper.update2(emp);

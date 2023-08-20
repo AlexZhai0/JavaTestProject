@@ -26,8 +26,18 @@ public class DeptController {
         return Result.success(deptList);
     }
 
-    @DeleteMapping("/{id}")
+//    @DeleteMapping("/{id}")
     public Result delete(@PathVariable Integer id) {
+        //日志记录
+        log.info("根据id删除部门");
+        //调用service层功能
+        deptService.delete(id);
+        //响应
+        return Result.success();
+    }
+
+    @DeleteMapping("/{id}")
+    public Result deleteTrans(@PathVariable Integer id) {
         //日志记录
         log.info("根据id删除部门");
         //调用service层功能

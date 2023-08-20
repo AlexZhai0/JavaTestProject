@@ -67,4 +67,10 @@ public interface EmpMapper {
 
     @Select("select * from emp where username = #{username} and password = #{password}")
     Emp getByUsernameAndPassword(Emp emp);
+
+    /**
+     * 根据部门ID删除该部门下的员工数据
+     */
+    @Delete("delete  from emp where dept_id = #{deptId}")
+    void deleteByDeptId(Integer deptId);
 }
