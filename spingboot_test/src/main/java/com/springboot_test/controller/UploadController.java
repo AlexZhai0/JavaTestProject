@@ -1,7 +1,7 @@
 package com.springboot_test.controller;
 
 import com.springboot_test.bean.Result;
-import com.springboot_test.utils.AliOSSUtils;
+//import com.springboot_test.utils.AliOSSUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;

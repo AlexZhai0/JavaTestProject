@@ -1,5 +1,6 @@
 package com.springboot_test;
 
+import com.aliyun.oss.AliOSSUtils;
 import com.springboot_test.bean.Emp;
 import com.springboot_test.bean.User;
 import com.springboot_test.mapping.EmpMapper;
@@ -88,6 +89,14 @@ class SpringbootTestApplicationTests {
 //        List<Integer> ids = Arrays.asList(17, 19);
 //        empMapper.deleteByIds(ids);
 
+    }
+
+    @Autowired
+    private AliOSSUtils aliOSSUtils;
+
+    @Test
+    public void aliOsTest() {
+        System.out.println("阿里云：" + aliOSSUtils);
     }
 
 }
